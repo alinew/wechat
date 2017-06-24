@@ -114,7 +114,7 @@ class Receive
      */
     protected function getSign($key)
     {
-        return rawurldecode($_GET[$key]);
+        return isset($_GET[$key]) ? rawurldecode($_GET[$key]) : '';
     }
 
     /**
